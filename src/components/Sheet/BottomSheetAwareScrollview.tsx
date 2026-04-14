@@ -15,10 +15,11 @@ const AnimatedScrollView =
   Reanimated.createAnimatedComponent<KeyboardAwareScrollViewProps>(
     KeyboardAwareScrollView,
   );
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const BottomSheetScrollViewComponent = createBottomSheetScrollableComponent<
   BottomSheetScrollViewMethods,
   BottomSheetScrollViewProps
->(SCROLLABLE_TYPE.SCROLLVIEW, AnimatedScrollView);
+>(SCROLLABLE_TYPE.SCROLLVIEW, AnimatedScrollView as any);
 
 const BottomSheetKeyboardAwareScrollView = memo(
   (props: BottomSheetScrollViewProps & KeyboardAwareScrollViewProps) => {
